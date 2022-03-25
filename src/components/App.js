@@ -2,8 +2,9 @@ import React from "react"
 import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
 import Signup from "./Signup";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Dashboard from "./Dashboard";
+import Login from "./Login";
 
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
+              <Route exact path="/" component={Dashboard} />
               <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
             </Switch>
-
 
             {/* at react-router-dom v6 switches changed to Routes but we are going to use v5.2.0 */}
             {/* to change version if react-router-dom installed uninstall with 'npm uninstall react-router-dom' */}
@@ -26,7 +28,6 @@ function App() {
             {/* </Routes> */}
           </AuthProvider>
         </Router>
-        <Signup />
       </div>
     </Container>
 
