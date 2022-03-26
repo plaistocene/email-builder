@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
+import ForgotPassword from "./ForgotPassword";
 
 
 function App() {
@@ -18,14 +19,15 @@ function App() {
               <PrivateRoute exact path="/" component={Dashboard} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>
 
             {/* at react-router-dom v6 switches changed to Routes but we are going to use v5.2.0 */}
             {/* to change version if react-router-dom installed uninstall with 'npm uninstall react-router-dom' */}
             {/* than install v5.2.0 with  'npm install react-router-dom@5.2.0' */}
             {/* <Routes> */}
-              {/* <Route path="/signup" element={ <Signup /> } /> */}
-              {/* <Route path="/homee" element={ <Home />} /> */}
+            {/* <Route path="/signup" element={ <Signup /> } /> */}
+            {/* <Route path="/homee" element={ <Home />} /> */}
             {/* </Routes> */}
           </AuthProvider>
         </Router>
