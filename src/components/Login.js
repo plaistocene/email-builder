@@ -15,7 +15,7 @@ export default function Login() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-         try {
+        try {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
@@ -49,6 +49,9 @@ export default function Login() {
                             Log In
                         </Button>
                     </Form>
+                    <div className="w-100 text-center mt-3">
+                        <Link to="/forgot-password">Forgot Password?</Link>
+                    </div>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
