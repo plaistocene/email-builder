@@ -1,3 +1,4 @@
+# !!! I dismissed 3 dependabot security issue warnings without fixing them. If you want to use this project beware !!!
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
